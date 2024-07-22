@@ -8,14 +8,14 @@
 
 ### Dataset overview
 
-_![스크린샷 2024-07-22 오전 10 10 14](https://github.com/user-attachments/assets/9e25ff77-98dc-407e-91fa-c7832cbd69ff)
+![스크린샷 2024-07-22 오전 10 10 14](https://github.com/user-attachments/assets/9e25ff77-98dc-407e-91fa-c7832cbd69ff)
 
 - train data : 1118822개
 - test data : 9272개
 
 
 ### EDA
-#### 데이터 한계점 파악
+### 데이터 한계점 파악
 1. 결측치
 - 대부분의 Feature가 결측치가 80%이상
 
@@ -25,7 +25,7 @@ _![스크린샷 2024-07-22 오전 10 10 14](https://g
 3. feature 유용성
 - 아파트 가격을 유추하기에 적절한지에 대한 의문
 
-#### 데이터 한계점 극복 방안
+### 데이터 한계점 극복 방안
 1. 결측치
 - 크롤링, feature 제거, 통계치 활용
 
@@ -37,12 +37,12 @@ _![스크린샷 2024-07-22 오전 10 10 14](https://g
 - domain 지식 활용
 - 새로운 feature 추가
 
-#### 결측치 처리
+### 결측치 처리
 - 좌표X, 좌표Y
     - 크롤링
     - 시군구, 번지 활용
 
-#### 이상치 처리
+### 이상치 처리
 1. 아파트별 target 이상치
 - 아파트별 가격이 튀는 부분 탐색
 - 좌우 2개씩 4개 데이터 평균과 현재 값 비교
@@ -73,7 +73,7 @@ _![스크린샷 2024-07-22 오전 10 10 14](https://g
 ### Feature engineering
 - 다양한 변수를 생성하여 사용
 
-#### feature 생성
+### feature 생성
 1. 지하철, 버스 정보
 - geopy 라이브러리 활용
 - 주어진 지하철, 버스 데이터 활용
@@ -122,7 +122,7 @@ _![스크린샷 2024-07-22 오전 10 10 14](https://g
 8. 계약월_sin
 - np.sin(2 * np.pi * df[‘계약월'] / 12)
 
-#### feature selection
+### feature selection
 1. Feature Importance
 - 모델 생성 후 feature importance 값 참고
 - 8개의 feature 선택
@@ -135,5 +135,5 @@ _![스크린샷 2024-07-22 오전 10 10 14](https://g
 
 (Feed Forward Selection 사진 첨부)
 
-#### 최종 모델에 사용한 feature
+### 최종 모델에 사용한 feature
 (최종 모델에 사용한 feature 사진 첨부)
